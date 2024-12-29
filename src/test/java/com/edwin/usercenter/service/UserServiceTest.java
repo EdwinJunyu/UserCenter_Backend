@@ -1,6 +1,6 @@
-package com.yupi.usercenter.service;
-import com.yupi.usercenter.exception.BusinessException;
-import com.yupi.usercenter.model.domain.User;
+package com.edwin.usercenter.service;
+import com.edwin.usercenter.exception.BusinessException;
+import com.edwin.usercenter.model.domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

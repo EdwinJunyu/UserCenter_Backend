@@ -1,5 +1,5 @@
-package com.yupi.usercenter.exception;
-import com.yupi.usercenter.common.ErrorCode;
+package com.edwin.usercenter.exception;
+import com.edwin.usercenter.common.ErrorCode;
 
 /**
  * 自定义异常类

@@ -1,4 +1,4 @@
-package com.yupi.usercenter.contant;
+package com.edwin.usercenter.contant;
 
 /**
  * 用户常量

@@ -1,14 +1,14 @@
-package com.yupi.usercenter.model.domain.request;
+package com.edwin.usercenter.model.domain.request;
 
 import lombok.Data;
 
 import java.io.Serializable;
 
 /**
- * 用户注册请求体
+ * 用户登录请求体
  */
 @Data
-public class UserRegisterRequest implements Serializable {
+public class UserLoginRequest implements Serializable {
 
     private static final long serialVersionUID = 3191241716373120793L;
 
@@ -22,13 +22,4 @@ public class UserRegisterRequest implements Serializable {
      */
     private String userPassword;
 
-    /**
-     * 校验密码
-     */
-    private String checkPassword;
-
-    /**
-     * 星球编号
-     */
-    private String planetCode;
 }

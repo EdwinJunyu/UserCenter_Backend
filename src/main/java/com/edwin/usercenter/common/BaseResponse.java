@@ -1,4 +1,4 @@
-package com.yupi.usercenter.common;
+package com.edwin.usercenter.common;
 
 import lombok.Data;
 
