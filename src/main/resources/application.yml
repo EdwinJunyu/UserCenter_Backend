@@ -11,6 +11,11 @@ spring:
   # session 失效时间
   session:
     timeout: 86400
+    store-type: redis
+  redis:
+    port: 6379
+    host: 154.9.254.66
+    password: H1111236
 server:
   port: 8080
   servlet:

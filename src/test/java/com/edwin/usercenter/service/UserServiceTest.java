@@ -1,11 +1,14 @@
 package com.edwin.usercenter.service;
 import com.edwin.usercenter.exception.BusinessException;
 import com.edwin.usercenter.model.domain.User;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 用户服务测试
@@ -131,4 +134,11 @@ public class UserServiceTest {
         //result = userService.userRegister(userAccount, userPassword, checkPassword, planetCode);
         //Assertions.assertEquals(-1, result);
     }
+    @Test
+    public void testSearchUsersByTags(){
+        List<String> tagNameList = Arrays.asList("java", "python");
+        List<User> userList = userService.searchUsersByTags(tagNameList);
+        Assert.assertNotNull(userList);
+    }
+
 }

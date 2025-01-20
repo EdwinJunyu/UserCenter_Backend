@@ -14,9 +14,6 @@ import java.security.NoSuchAlgorithmException;
  */
 @SpringBootTest
 class UserCenterApplicationTests {
-
-    // https://yupi.icu/
-
     @Test
     void testDigest() throws NoSuchAlgorithmException {
         String newPassword = DigestUtils.md5DigestAsHex(("abcd" + "mypassword").getBytes());
