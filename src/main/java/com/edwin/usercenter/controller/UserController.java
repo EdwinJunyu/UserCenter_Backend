@@ -1,6 +1,8 @@
 package com.edwin.usercenter.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.edwin.usercenter.common.BaseResponse;
 import com.edwin.usercenter.common.ErrorCode;
 import com.edwin.usercenter.common.ResultUtils;
@@ -123,6 +125,13 @@ public class UserController {
         List<User> userList = userService.list(queryWrapper);
         List<User> list = userList.stream().map(user -> userService.getSafetyUser(user)).collect(Collectors.toList());
         return ResultUtils.success(list);
+    }
+
+    @GetMapping("/recommend")
+    public BaseResponse<Page<User>> recommendUsers(int pageSize, long pageNum, HttpServletRequest request) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        Page<User> userList = userService.page(new Page<>((pageNum - 1) * pageSize, pageSize), queryWrapper);
+        return ResultUtils.success(userList);
     }
 
     @GetMapping("/search/tags")
